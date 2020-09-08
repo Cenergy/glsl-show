@@ -1,0 +1,125 @@
+---
+name: 基本用法
+route: /getting_start
+menu: 快速入门
+---
+
+import GitHub from '../components/github'
+import Nav from '../components/nav';
+import DemoGround from '../components/demoground';
+
+<GitHub link="https://github.com/akira-cn/glsl-doodle"/>
+
+<Nav/>
+
+## 安装
+
+通过CDN直接使用：
+
+```html
+<script src="https://unpkg.com/glsl-doodle/dist/glsl-doodle.js"></script>
+```
+
+通过NPM安装
+
+```bash
+npm i glsl-doodle --save
+```
+
+通过Yarn安装
+
+```bash
+yarn add glsl-doodle --save
+```
+
+## 内嵌代码
+
+在网页上引入glsl-doodle脚本文件：
+
+```html
+<script src="https://unpkg.com/glsl-doodle/dist/glsl-doodle.js"></script>
+```
+
+然后放置`<glsl-doodle>`标签：
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>GLSL Doodle</title>
+  <script src="https://unpkg.com/glsl-doodle@0.1.2/dist/glsl-doodle.js"></script>
+</head>
+<body>
+  <glsl-doodle for="myshader"></glsl-doodle>
+  <script id="myshader" type="x-shader/x-fragment">
+  #ifdef GL_ES
+  precision mediump float;
+  #endif
+
+  #pragma include <graphics>
+  #pragma include <pattern>
+  #pragma include <color>
+
+  uniform vec2 dd_resolution;
+
+  void main() {
+    vec2 st =  gl_FragCoord.xy / dd_resolution.xy;
+    float d = sdf_circle(st, vec2(0.5), 0.5);
+    d = fill(d);
+    if(d > 0.0) {
+      vec2 grid = vec2(4.0, 4.0);
+      vec2 overlaps[4]; 
+      grid_overlap(st, grid, overlaps);
+      float d3 = 0.0;
+      for(int i = 0; i < 4; i++) {
+        vec2 st2 = overlaps[i];
+        st2 *= 0.6;
+        // st2 = skew(st2, vec2(0), vec2(1.0, 0.0));
+        st2 = rotate(st2, vec2(0.0), - PI / 3.0);
+        float d2 = shape_hypocycloid(st2, vec2(0), 4);
+        d3 = udf_union(d3, d2);
+      }
+      color(d3, vec3(0.376, 0.337, 0.619));
+    }
+  }    
+  </script>
+</body>
+</html>
+```
+
+glsl-doodle 标签可以设置 for 属性，指向存放 fragment shader 代码的元素。
+
+```html
+<glsl-doodle for="myshader"></glsl-doodle>
+<script id="myshader" type="x-shader/x-fragment">
+...
+</script>
+```
+
+<DemoGround demoId="docs/doodle" height="370"></DemoGround>
+
+## 引入外部脚本
+
+glsl-doodle 支持外链加载资源：
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>GLSL Doodle</title>
+  <script src="https://unpkg.com/glsl-doodle/dist/glsl-doodle.js"></script>
+</head>
+<body>
+  <glsl-doodle width="256" height="256" src="https://raw.githubusercontent.com/akira-cn/glsl-doodle/master/demos/preview/grids/index.glsl"></glsl-doodle>
+</body>
+</html>
+```
+
+<DemoGround demoId="docs/doodle-link" height="370"></DemoGround>
+
+
+💡 **如果既没有设置 for 属性，也没有设置 src 属性，glsl-doodle 会默认加载当前路径下的 `index.glsl` 文件。**
