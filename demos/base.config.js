@@ -1,3 +1,4 @@
+import * as monaco from 'monaco-editor/esm/vs/editor/editor.main.js';
 import glsl from './glsl-lang.js';
 
 export default function (htmlCode, cssCode, jsCode) {
@@ -7,12 +8,12 @@ export default function (htmlCode, cssCode, jsCode) {
       transformer: 'glsl',
       transform(code) {
         return `const doodle = new Doodle(glslDoodle);
-doodle.compile(\`${code}\`).then((program) => {
-  doodle.useProgram(program);
-  doodle.render();
-});`;
+        doodle.compile(\`${code}\`).then((program) => {
+        doodle.useProgram(program);
+        doodle.render();
+        });`;
       },
-      editorHook(monaco, code, language) {
+      editorHook(code, language) {
         // Register a new language
         monaco.languages.register({id: 'glsl'});
 
