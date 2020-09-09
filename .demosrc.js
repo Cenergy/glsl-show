@@ -4,7 +4,7 @@ module.exports = function(env) {
       port: 3030,
     },
     output: {
-      dir: 'docs/demo',
+      dir: 'release/build',
       publicUrl: '.',
     },
     staticFolder: env === 'development' ? 'dist': null,

@@ -14,7 +14,8 @@
     "demo:prod": "cross-env NODE_ENV=production demosify --prod",
     "prepublishOnly": "npm run build",
     "lint": "eslint 'src/**/*.js' --fix",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "hexo deploy"
   },
   "keywords": [],
   "author": "",

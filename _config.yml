@@ -1,0 +1,12 @@
+# vue deployer
+public_dir: release/build
+
+deploy:
+  type: git
+  repo:
+    github: 
+      url: https://github.com/Cenergy/glsl-show.git
+      branch: master
+    aigisss:
+      url: root@aigisss:/home/git/glsl
+      branch: master
