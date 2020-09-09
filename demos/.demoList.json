@@ -1,8 +1,12 @@
 [
   {
-    "label": "getting start",
+    "label": "hello GLSL",
     "src": "getting_start"
-  }, {
+  },{
+    "label": "动态变化",
+    "src": "dynamic_change"
+  }, 
+  {
     "label": "coordinate",
     "src": "coord"
   }, {
