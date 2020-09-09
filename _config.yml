@@ -1,5 +1,5 @@
 # vue deployer
-public_dir: release/build
+public_dir: release
 
 deploy:
   type: git

@@ -25,7 +25,7 @@ module.exports = function(env) {
     // monoindustrial,
     boxTheme: 'monokai',
     globalPackages: {
-      js: [env === 'development' ? '/glsl-doodle.js': '/js/glsl-doodle.js'],
+      js: [env === 'development' ? '/glsl-doodle.js': '/glsl/js/glsl-doodle.js'],
       css: [],
     },
     // tab waterfall
