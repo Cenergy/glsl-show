@@ -10,7 +10,7 @@ module.exports = function(env) {
     staticFolder: env === 'development' ? 'dist': null,
     themeFile: 'demos/theme.scss',
     // demoList: env === 'development' ? '.demoList.dev.json': '.demoList.prod.json',
-    name: 'GLSL在线调试',
+    name: '在线GLSL',
     version: 'next',
     homePage: global.top == null || global.top === global ? 'http://www.aigisss.com/' : location.href,
     logo: '',
