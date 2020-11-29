@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[38],{831:function(r,n,o){"use strict";o.r(n),n.default="#ifdef GL_ES\r\nprecision mediump float;\r\n#endif\r\n\r\n#pragma include <stdlib>\r\n\r\nuniform vec2 dd_resolution;\r\n\r\nvoid main() {\r\n  vec2 st = gl_FragCoord.xy / dd_resolution;\r\n  gl_FragColor.rgb = random(st) * vec3(1.0);\r\n  gl_FragColor.a = 1.0;\r\n}"}}]);

@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{77:function(n,t,a){"use strict";a.r(t),t.default='<!DOCTYPE html>\r\n<html lang="en">\r\n<head>\r\n  <meta charset="UTF-8">\r\n  <title>SandBox</title>\r\n</head>\r\n<body>\r\n  <canvas id="glslDoodle" width="512" height="512"></canvas>\r\n</body>\r\n</html>'}}]);

@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{469:function(n,r,o){"use strict";o.r(r),r.default="body {\r\n  display: flex;\r\n}\r\n\r\nglsl-doodle {\r\n  display: inline-block;\r\n  background: #fff;\r\n  font-size: 0;\r\n  margin: auto;\r\n}"}}]);
