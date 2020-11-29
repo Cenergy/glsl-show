@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[22],{812:function(n,r,o){"use strict";o.r(r),r.default="#ifdef GL_ES\r\nprecision mediump float;\r\n#endif\r\n\r\nvoid main() {\r\n  vec2 st = gl_FragCoord.xy;\r\n  if(st.x > 256.0) {\r\n    gl_FragColor = vec4(1.0);\r\n  } else {\r\n    gl_FragColor = vec4(0, 0, 0, 1.0);\r\n  }\r\n}"}}]);

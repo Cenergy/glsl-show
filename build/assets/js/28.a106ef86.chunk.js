@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[28],{821:function(e,s,o){"use strict";o.r(s),s.default='<glsl-doodle width="256" height="256"\r\n  src="https://raw.githubusercontent.com/akira-cn/glsl-doodle/master/demos/preview/grids/index.glsl">\r\n</glsl-doodle>'}}]);
