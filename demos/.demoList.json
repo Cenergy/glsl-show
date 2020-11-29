@@ -11,6 +11,18 @@
     "src": "embed"
   }, 
   {
+    "label": "金刚石形状",
+    "src": "diamondtiles"
+  }, 
+  {
+    "label": "移动的点",
+    "src": "marching_dots"
+  }, 
+  {
+    "label": "易经图",
+    "src": "iching"
+  }, 
+  {
     "label": "coordinate",
     "src": "coord"
   }, {
