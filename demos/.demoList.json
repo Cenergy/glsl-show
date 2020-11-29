@@ -7,6 +7,10 @@
     "src": "dynamic_change"
   }, 
   {
+    "label": "变化艺术",
+    "src": "embed"
+  }, 
+  {
     "label": "coordinate",
     "src": "coord"
   }, {
