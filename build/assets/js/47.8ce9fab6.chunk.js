@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[47],{592:function(n,i,o){"use strict";o.r(i),i.default="#ifdef GL_ES\nprecision mediump float;\n#endif\n\nuniform float dd_time;\n\nvoid main() {\n\tgl_FragColor = vec4(abs(sin(dd_time)),0.0,0.0,1.0);\n}"}}]);
